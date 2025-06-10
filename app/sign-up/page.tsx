@@ -93,10 +93,11 @@ export default function SignUp() {
     <div className="min-h-screen bg-black text-white">
       {showLoadingScreen && <LoadingScreen />}
       {!showLoadingScreen && <Navbar />}
-      {!showLoadingScreen && (
+      
       <main className="container mx-auto px-6 pt-24 pb-16 flex justify-center">
           <div className="w-full max-w-md">
-            <div className="text-center mb-8">
+            {!showLoadingScreen && (
+              <div className="text-center mb-8">
               <Image
                 src="/favicon.png"
                 alt="Galatea.AI Logo"
@@ -110,7 +111,7 @@ export default function SignUp() {
               <p className="text-gray-400 mt-2">
                 Create your account to start your journey
               </p>
-            </div>
+            </div>)}
 
             {error && (
               <div className="bg-red-500/10 border border-red-500/50 text-red-500 px-4 py-3 rounded-md mb-6">
@@ -309,7 +310,7 @@ export default function SignUp() {
             </form>
           </div>
        
-      </main> )}
+      </main> 
 
       <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-gray-950 to-transparent -z-10"></div>
     </div>
