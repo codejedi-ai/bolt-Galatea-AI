@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Heart, X } from "lucide-react"
 import { Navbar } from "@/components/navbar"
+import { LoadingScreen } from "@/components/loading-screen"
 
 interface AIProfile {
   uuid: string
@@ -105,11 +106,7 @@ export default function StartSwiping() {
   }
 
   if (isLoading) {
-    return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
-        <div className="animate-pulse text-teal-400 text-2xl">Loading...</div>
-      </div>
-    )
+    return <LoadingScreen message="Loading your matches..." />
   }
 
   if (error) {
