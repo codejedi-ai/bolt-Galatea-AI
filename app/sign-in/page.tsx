@@ -73,10 +73,10 @@ export default function SignIn() {
   return (
     <div className="min-h-screen bg-black text-white">
       <Navbar />
-      {showLoadingScreen && <CircleLoader />}
 
-      {!showLoadingScreen && (
-        <main className="container mx-auto px-6 pt-24 pb-16 flex justify-center">
+      <main className="container mx-auto px-6 pt-24 pb-16 flex justify-center">
+        {showLoadingScreen && <CircleLoader />}
+        {!showLoadingScreen && (
           <div className="w-full max-w-md">
             <div className="text-center mb-8">
               <Image
@@ -245,8 +245,9 @@ export default function SignIn() {
               </div>
             </form>
           </div>
-        </main>
-      )}
+        )}
+      </main>
+
       <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-gray-950 to-transparent -z-10"></div>
     </div>
   );
