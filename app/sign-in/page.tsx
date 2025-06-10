@@ -13,7 +13,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Navbar } from "@/components/navbar"
 import { EyeIcon, EyeOffIcon, CheckCircleIcon } from "lucide-react"
 import { useAuth } from "@/contexts/auth-context"
-import { LoadingScreen } from "@/components/loading-screen"
+import { SimpleCircleLoader } from "@/components/loading-screen"
 
 export default function SignIn() {
   const [email, setEmail] = useState("")
@@ -72,9 +72,7 @@ export default function SignIn() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {showLoadingScreen && (
-        <LoadingScreen message="Signing you in..." onComplete={() => setShowLoadingScreen(false)} />
-      )}
+      {showLoadingScreen && <SimpleCircleLoader />}
 
       <Navbar />
 
