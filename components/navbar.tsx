@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Logo } from "@/components/logo"
-import { Menu, X, LogOut, User } from "lucide-react"
+import { Menu, X, User } from "lucide-react"
 import { useAuth } from "@/contexts/auth-context"
 
 export function Navbar() {
@@ -62,14 +62,7 @@ export function Navbar() {
                 <User size={18} />
                 <span className="text-sm">{currentUser.displayName || currentUser.email}</span>
               </Link>
-              <Button
-                variant="ghost"
-                onClick={handleLogout}
-                className="text-gray-300 hover:text-teal-400 hover:bg-black/20"
-              >
-                <LogOut size={18} className="mr-2" />
-                Log Out
-              </Button>
+
             </>
           ) : (
             <>
@@ -125,17 +118,6 @@ export function Navbar() {
                     <User size={18} />
                     <span className="text-sm">{currentUser.displayName || currentUser.email}</span>
                   </Link>
-                  <Button
-                    variant="ghost"
-                    onClick={() => {
-                      handleLogout()
-                      setIsMobileMenuOpen(false)
-                    }}
-                    className="text-gray-300 hover:text-teal-400 justify-start"
-                  >
-                    <LogOut size={18} className="mr-2" />
-                    Log Out
-                  </Button>
                 </>
               ) : (
                 <>
