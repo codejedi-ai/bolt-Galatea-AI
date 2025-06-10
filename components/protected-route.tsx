@@ -5,7 +5,7 @@ import type React from "react"
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import { useAuth } from "@/contexts/auth-context"
-import { SimpleCircleLoader } from "@/components/loading-screen"
+import { CircleLoader } from "@/components/loading-screen"
 
 export function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { currentUser, loading } = useAuth()
@@ -23,7 +23,7 @@ export function ProtectedRoute({ children }: { children: React.ReactNode }) {
   }, [currentUser, loading, router])
 
   if (loading || showLoader) {
-    return <SimpleCircleLoader />
+    return <CircleLoader />
   }
 
   return currentUser ? <>{children}</> : null
