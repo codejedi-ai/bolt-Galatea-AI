@@ -72,7 +72,7 @@ export default function SignIn() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <Navbar />
+      {!showLoadingScreen && <Navbar />}
 
       <main className="container mx-auto px-6 pt-24 pb-16 flex justify-center">
         {showLoadingScreen && <CircleLoader />}
