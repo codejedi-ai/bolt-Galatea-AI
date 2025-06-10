@@ -299,7 +299,7 @@ export default function Profile() {
                   </CardHeader>
                   <CardContent>
                     <form onSubmit={handleUpdateProfile} className="space-y-6">
-                      <div className="space-y-2">
+                      <div className="space-y-2 text-white">
                         <Label htmlFor="displayName">Display Name</Label>
                         <Input
                           id="displayName"
@@ -311,7 +311,7 @@ export default function Profile() {
                         />
                       </div>
 
-                      <div className="space-y-2">
+                      <div className="space-y-2 text-white">
                         <Label htmlFor="email">Email Address</Label>
                         <Input
                           id="email"
