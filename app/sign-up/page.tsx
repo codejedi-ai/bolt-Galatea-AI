@@ -13,7 +13,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Navbar } from "@/components/navbar";
 import { EyeIcon, EyeOffIcon, CheckCircleIcon } from "lucide-react";
 import { useAuth } from "@/contexts/auth-context";
-import { LoadingScreen } from "@/components/loading-screen";
+import { SimpleCircleLoader } from "@/components/loading-screen";
 
 export default function SignUp() {
   const [name, setName] = useState("");
@@ -91,7 +91,7 @@ export default function SignUp() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {showLoadingScreen && <LoadingScreen />}
+      {showLoadingScreen && <SimpleCircleLoader />}
       {!showLoadingScreen && <Navbar />}
       
       <main className="container mx-auto px-6 pt-24 pb-16 flex justify-center">
