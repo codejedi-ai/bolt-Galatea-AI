@@ -466,7 +466,7 @@ export default function Profile() {
                         <Button
                           onClick={() => setActiveTab("accounts")}
                           variant="outline"
-                          className="border-gray-700 text-gray-300 hover:bg-gray-800"
+                          className="bg-teal-500 text-black hover:bg-teal-400"
                         >
                           Manage Connected Accounts
                         </Button>
