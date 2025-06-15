@@ -165,7 +165,7 @@ export default function Home() {
                 description="Your intellectual conversation partner. Perfect for practicing deep discussions and building thoughtful communication skills."
               />
               <CompanionCard
-                image="/images/galatea-1.jpg"
+                image="/images/galatea-1.png"
                 name="Joseline"
                 description="The social butterfly who helps you master casual conversations and break the ice with confidence."
               />
