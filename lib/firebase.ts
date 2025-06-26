@@ -13,7 +13,6 @@ const firebaseConfig = {
   appId: "1:727737899444:web:16152c4885a96302af7ae1",
   measurementId: "G-6ZQT56XSCV"
 };
-
 if (!firebaseConfig.apiKey) {
   console.error("Firebase API key is missing. Please set NEXT_PUBLIC_FIREBASE_API_KEY environment variable.")
 }
