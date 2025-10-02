@@ -7,9 +7,17 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
  * A friendly, actionable Auth error screen.
  * Reads error info from the URL search params and provides quick next steps.
  */
-export default function AuthCodeErrorPage() {
+export default function AuthCodeErrorPage({
+  searchParams,
+}: {
+  searchParams?: { [key: string]: string | string[] | undefined }
+}) {
   const userMessage = "We couldn't complete your sign-in. Please try again."
   const next = "/"
+  const technicalCode =
+    (typeof searchParams?.error === "string" && searchParams?.error) ||
+    (typeof searchParams?.code === "string" && searchParams?.code) ||
+    false
 
   return (
     <main className="min-h-[100svh] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-zinc-900 via-black to-black text-white">
